@@ -1,33 +1,37 @@
 import React from 'react';
-import { ArrowRight, Shield, Clock, Calculator, CheckCircle2, FileText, PieChart, MessageSquare } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import Benefits from './components/Benefits';
-import Testimonials from './components/Testimonials';
-import Pricing from './components/Pricing';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import FeaturesPage from './pages/Features';
+import HowItWorksPage from './pages/HowItWorks';
+import PricingPage from './pages/Pricing';
+import ContactPage from './pages/Contact';
+import AboutUs from './pages/AboutUs';
+import Resources from './pages/Resources';
+import Careers from './pages/Careers';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <Navbar />
-      <main>
-        <Hero />
-        <Features />
-        <HowItWorks />
-        <Benefits />
-        <Testimonials />
-        <Pricing />
-        <FAQ />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/features" element={<FeaturesPage />} />
+            <Route path="/how-it-works" element={<HowItWorksPage />} />
+            <Route path="/pricing" element={<PricingPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/careers" element={<Careers />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
-export default App;
+export default App
