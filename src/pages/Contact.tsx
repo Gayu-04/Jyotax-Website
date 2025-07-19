@@ -47,6 +47,13 @@ const Contact = () => {
                   className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-orange-500 focus:ring-orange-500"
                 />
               </div>
+              <select name="industry" required>
+                <option value="">- Please Select Industry -</option>
+                <option value="finance">Finance</option>
+                <option value="technology">Technology</option>
+                <option value="healthcare">Healthcare</option>
+                <option value="other">Other</option>
+              </select>
               <button
                 type="submit"
                 className="w-full bg-orange-600 text-white px-6 py-3 rounded-md hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
@@ -61,24 +68,18 @@ const Contact = () => {
             <div className="space-y-6">
               <div className="flex items-center">
                 <Mail className="h-6 w-6 text-orange-600" />
-                <span className="ml-3 text-gray-600">support@jyotax.ai</span>
+                <span className="ml-3 text-gray-600">karyantra@jyotax.ai</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-6 w-6 text-orange-600" />
-                <span className="ml-3 text-gray-600">+91 (800) 123-4567</span>
-              </div>
-              <div className="flex items-center">
-                <MessageSquare className="h-6 w-6 text-orange-600" />
-                <span className="ml-3 text-gray-600">Live Chat (Business Hours)</span>
+                <span className="ml-3 text-gray-600">+91-8390990088</span>
               </div>
             </div>
 
             <div className="mt-8">
-              <h4 className="text-lg font-medium text-gray-900 mb-4">Business Hours</h4>
+              <h4 className="text-lg font-medium text-gray-900 mb-4">Address</h4>
               <p className="text-gray-600">
-                Monday - Friday: 9:00 AM - 6:00 PM IST<br />
-                Saturday: 10:00 AM - 2:00 PM IST<br />
-                Sunday: Closed
+              608, 6th Floor Mont Vert Velocity, S.No-140, Baner-Pashan Link Rd, Pashan Pune, Maharashtra 411021, Bharat
               </p>
             </div>
           </div>
